@@ -45,7 +45,7 @@ class Browser:
     browser: typing.List[subprocess.Popen] = []
     tdir: typing.List[tempfile.TemporaryDirectory] = []
 
-    @command.command("firefox_browser.start")
+    @command.command("firefox.start")
     def start(self) -> None:
         """
             Start an isolated instance of Firefox that points to the currently

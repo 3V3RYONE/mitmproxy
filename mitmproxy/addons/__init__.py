@@ -56,4 +56,5 @@ def default_addons():
         save.Save(),
         tlsconfig.TlsConfig(),
         upstream_auth.UpstreamAuth(),
+        firefox.Firefoxstart(),
     ]
