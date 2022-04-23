@@ -25,7 +25,7 @@ from mitmproxy.addons import stickycookie
 from mitmproxy.addons import save
 from mitmproxy.addons import tlsconfig
 from mitmproxy.addons import upstream_auth
-
+from mitmproxy.addons import firefox
 
 def default_addons():
     return [

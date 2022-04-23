@@ -9,7 +9,8 @@ from mitmproxy import ctx
 
 def get_firefox_executable() -> typing.Optional[str]:
     for browser in (
-            "firefox"
+            r"/usr/bin/firefox",
+            r"/usr/lib/firefox"
     ):
         if shutil.which(browser):
             return browser
@@ -41,7 +42,7 @@ def get_browser_cmd() -> typing.Optional[typing.List[str]]:
     return None
 
 
-class Browser:
+class Firefoxstart:
     browser: typing.List[subprocess.Popen] = []
     tdir: typing.List[tempfile.TemporaryDirectory] = []
 
