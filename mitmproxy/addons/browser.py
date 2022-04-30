@@ -92,6 +92,7 @@ class Browser:
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         ))
+        print(str(self.browser))
 
     def done(self):
         for browser in self.browser:

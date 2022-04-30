@@ -65,21 +65,12 @@ class Firefoxstart:
         self.browser.append(subprocess.Popen(
             [
                 *cmd,
-                "--user-data-dir=%s" % str(tdir.name),
-                "--proxy-server={}:{}".format(
-                    ctx.options.listen_host or "127.0.0.1",
-                    ctx.options.listen_port
-                ),
-                "--disable-fre",
-                "--no-default-browser-check",
-                "--no-first-run",
-                "--disable-extensions",
-
-                "about:blank",
+                "--preferences",
             ],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         ))
+        print(str(self.browser))
 
     def done(self):
         for browser in self.browser:
